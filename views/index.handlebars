@@ -5,6 +5,10 @@
 	<title>My HCI Friends</title>	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.css" rel="stylesheet">
+	<link href="css/hci-friends.css" rel="stylesheet">
+	
 	
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -16,6 +20,7 @@
 </head>
 
 <body>
+	<div class="container">
 	<h1>My HCI Friends</h1>
 
 	<form id="addFriendForm" role="form" method="get" action="/add">
@@ -30,5 +35,27 @@
 	    </div>
 	    <input type="submit" id="submitBtn" class="btn btn-default" value="Add the friend"></input>
 	</form>
+	</div>
+
+	<div class="container">
+	<h1>My HCI Friends</h1>
+
+	{{#each friends}}
+      <div class="friends">
+      	
+      		<img src={{imageURL}} class="img-responsive" id="FriendImg">
+      		<!--<img src={{imageURL}} class="img-rounded" id="FriendImg">-->
+        <a href="#"> <h3 class="clickfriends"> {{name}} </h3></a>
+        <p>{{description}}</p>
+      <hr>
+      </div>
+    {{/each}}
+
+	</div>
+
+	<!--<script src="https://code.jquery.com/jquery.js"></script>-->
+	<script type="js/jquery-1.11.0.js"></script>
+	<script type="js/hci-friends.js"></script>
+	<script type="js/bootstrap.js"></script>
 </body>
 </html>

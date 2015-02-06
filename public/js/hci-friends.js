@@ -5,6 +5,13 @@ $(document).ready(function() {
 	initializePage();
 })
 
+$('.clickfriends').click(function (){
+	console.log("00000000000");
+	preventDefault();
+	$(this).text(anagramedName(name);
+
+});
+
 /*
  * Function that is called when the document is ready.
  */
@@ -44,3 +51,4 @@ function anagrammedName(name) {
 		return name;
 	}
 }
+
